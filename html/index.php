@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Index</title>
+</head>
+<body>
+<div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="logo">P<span>rogram</span>L<span>ogic</span>M<span>en</span></a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="home.html">Inicio</a></li>
+                <li class="nav-item"><a href="aboutus.html">Sobre nós</a></li>
+                <li class="nav-item dropdown">
+                    <a href="menu.html">Menu</a>
+                    <ul class="submenu">
+                        <li><a href="links - Copia.html">Conteúdos</a></li>
+                        <li><a href="tdah.html">TDAH</a></li>
+                        <li><a href="ie.html">Inteligência Emocional</a></li>
+                        <li><a href="cognicao.html">Cognição</a></li>
+                        <li><a href="socioemocional.html">Socio-Emocional</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <section class="home">
+            <div class="home-text">
+                <h4 class="text-h4">Bem-Vindo a PLM!</h4>
+                <h1 class="text-h1">Conheça nosso site de educação</h1>
+                <p>Nós da equipe da PLM programamos um site visando alcançar um número de estudantes com dificuldades de aprendizagem e/ou falta de atenção. Faça login agora!</p>
+                <a href="../html/form.php" class="home-btn">Cadastre-se</a>&nbsp;&nbsp;&nbsp;
+                <a href="../html/login.php" class="home-btn">Login</a>
+            </div>
+            <div class="home-img">
+                <img src="../img/home.png" height="500px">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

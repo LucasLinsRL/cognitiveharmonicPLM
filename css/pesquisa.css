@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #015f83;
+    color: #000000;
+    padding: 20px;
+}
+
+h1, h3 {
+    color: #ffffff;
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f4f4f4;
+    color: #333;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #356afc;
+    background: #fff;
+}
+
+input[type="submit"] {
+    background: #356afc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #1b50e2;
+    transform: scale(1.05);
+}
+
+button a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #356afc;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button a:hover {
+    background-color: #1b50e2;
+    transform: scale(1.05);
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #013a5e;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #f4f4f4;
+}
+
+tr:nth-child(odd) {
+    background: #e1e1e1;
+}
+
+a {
+    color: #356afc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a img {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+a img:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="https://kit.fontawesome.com/f652752604.js" crossorigin="anonymous"></script>
+    <title>Home</title>
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      <script src="../Javascript/script.js"></script>
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="logo">P<span>rogram</span>L<span>ogic</span>M<span>en</span></a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="home.html">Inicio</a></li>
+                <li class="nav-item"><a href="aboutus.html">Sobre nós</a></li>
+
+                <li class="nav-item dropdown">
+                    <a href="menu.html">Menu</a>
+                    <ul class="submenu">
+                        <li><a href="links - Copia.html">Conteúdos</a></li>
+                        <li><a href="tdah.html">TDAH</a></li>
+                        <li><a href="ie.html">Inteligência Emocional</a></li>
+                        <li><a href="cognicao.html">Cognição</a></li>
+                        <li><a href="socioemocional.html">Socio-Emocional</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a href="contato.html">Contato</a></li>
+            </ul>
+
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <br><br><br><br><br>
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../img/1.png" style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="../img/2.png" style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../img/3.png" style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <script lang="javascript">
+          let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+      </script>
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h1>Cognitive Harmonic Project</h1>
+                <h5>Estímulo Cognitivo e Socioemocional: A Revolução no Aprendizado com a PLM</h5> <br>
+                <p>No mundo atual, a educação vai além da simples transmissão de conhecimentos acadêmicos. O desenvolvimento integral dos estudantes demanda uma abordagem que considere tanto habilidades cognitivas quanto socioemocionais. A PLM, uma empresa inovadora no setor educacional, desenvolveu um site especialmente projetado para atender a essa necessidade. <br> Este site visa aprimorar o desempenho dos estudantes ao promover o desenvolvimento dessas habilidades essenciais por meio de conteúdos diversificados, como textos, imagens e vídeos. Aqui está um olhar detalhado sobre como o site funciona, seu planejamento e os objetivos que busca alcançar.
+                </p>
+            </div>
+            <div class="col-6">
+                <br><br><br>
+                <img src="../img/banner.png" width="500px" border="4px">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="barra-horizontal">
+        <i class="fa-solid fa-people-group"></i> Quem somos? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        <i class="fa-solid fa-book-open"></i> Conheça nosso conteúdo! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <i class="fa-solid fa-video"></i> Assista nossos vídeos com conteúdos didático. 
+    </div> 
+    <br><br><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <center><h1>Cognitive Harmonic Project</h1> 
+                <h3>Como funciona nosso projeto? Planejamentos e definições de objetivos </h3></center>
+                <p>Nosso site é uma plataforma interativa e intuitiva, estruturada para facilitar o acesso a conteúdos que estimulem as habilidades cognitivas e socioemocionais dos estudantes. A navegação é simplificada para garantir que usuários de todas as idades possam explorar os recursos disponíveis com facilidade. A plataforma oferece uma rica variedade de textos, imagens e vídeos organizados em categorias temáticas. Cada conteúdo é selecionado e desenvolvido para atender a objetivos específicos de aprendizado e desenvolvimento. </p>
+                <br><br>
+                <p>O planejamento do site foi realizado com uma abordagem estratégica, focando em criar um ambiente de aprendizagem envolvente e eficaz. Os principais passos do planejamento incluíram pesquisa e análise de necessidades, desenvolvimento de conteúdo, design e usabilidade.
+                A PLM conduziu uma pesquisa detalhada para identificar as principais necessidades educacionais dos estudantes e as áreas que mais necessitam de desenvolvimento cognitivo e socioemocional. Com base na pesquisa, a PLM desenvolveu conteúdos alinhados aos objetivos de aprendizagem. O conteúdo é constantemente revisado e atualizado para garantir relevância e qualidade. O design do site foi pensado para ser visualmente atraente e fácil de usar. A interface é responsiva e adaptável a diferentes dispositivos, garantindo uma experiência fluida para todos os usuários.</p>
+                <br><br>
+                <p>Os objetivos deste site da PLM são múltiplos e visam proporcionar um impacto significativo no desenvolvimento dos estudantes, tais como: estimular o Pensamento crítico, oferecer suporte personalizado, promover habilidades socioemocionais, facilitar a autonomia no aprendizado. Por meio de conteúdos desafiadores e atividades interativas, o site incentiva os estudantes a desenvolver habilidades de pensamento crítico e resolução de problemas. As atividades e recursos disponíveis no site ajudam os estudantes a trabalhar habilidades como empatia, comunicação eficaz e colaboração, fundamentais para o sucesso acadêmico e pessoal. O site é projetado para permitir que os estudantes assumam o controle de seu próprio aprendizado, oferecendo ferramentas de autoavaliação e recursos para que possam identificar e trabalhar em suas áreas de desenvolvimento. Com recursos de feedback e fóruns de discussão, o site proporciona suporte personalizado, permitindo que os estudantes recebam orientação e apoio conforme suas necessidades individuais.
+                </p>
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <video controls class="video-pequeno" width="500">
+                    <source src="../videos/cognitiveproject.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-6">
+                <div class="video-container">
+                    <h1>Cognitive Harmonic Vídeo</h1>
+                    <p>Assista o vídeo ao lado, além de um vídeo de boas-vndas ao site, nele explica o objetivo, o que oferecemos de conteúdo, e a nossa pesquisa feita do porquê fizemos este site.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <footer class="rodape">
+        <div class="container">
+            <div class="info">
+                <h2>PLM</h2>
+                <p>Endereço: Av. Vital Brasil, 827 - Vila Acoreana <br> Poá - SP, 08557-000</p>
+                <p>Email: plm2k24@empresa.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+            <div class="links">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="../html/home.html">Home</a></li>
+                    <li><a href="../html/aboutus.html">Sobre Nós</a></li>
+                    <li><a href="../html/menu.html">Menu</a></li>
+                    <li><a href="../html/links - Copia.html">Vídeos/Conteúdos</a></li>
+                    <li><a href="../html/contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="social">
+                <h3>Siga-nos</h3>
+                &nbsp;&nbsp;&nbsp;<a href="https://www.instagram.com/plm_2k24?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><h1><i class="fa-brands fa-instagram"></i> </h1></a>
+            </div>
+        </div>
+        <div class="copy">
+            <p>&copy; 2024 Program Logic Men. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

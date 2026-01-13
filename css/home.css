@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --red:#d63a25;
+    --white:#fff;
+    --dark:#1e1c2a;
+}
+body{
+    color: var(--dark);
+    background: var(--white);
+}
+
+a {
+    color: #356afc;
+}
+
+.card {
+    background-color: white;
+    width: calc(50% - 40px);
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: auto;
+}
+.card h2 {
+    margin: 10px 0;
+}
+.card a {
+    display: inline;
+    margin: 10px;
+    padding: 10px 10px;
+    background-color: #356afc;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.card a:hover {
+    background-color: #014d67;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 120px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Estilo para o item 'Menu' */
+.navigation .nav-item {
+    position: relative; /* Necessário para o submenu */
+}
+
+/* Submenu */
+.navigation .nav-item .submenu {
+    display: none; /* Submenu oculto por padrão */
+    position: absolute;
+    top: 100%; /* Faz o submenu aparecer logo abaixo do item */
+    left: 0;
+    background-color: var(--white); /* Cor de fundo */
+    padding: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombras para dar efeito de profundidade */
+    min-width: 235px;
+}
+
+.navigation .nav-item:hover .submenu {
+    display: block; /* Exibe o submenu quando o item for focado */
+}
+
+/* Estilo para os links dentro do submenu */
+.navigation .submenu li a {
+    display: block;
+    padding: 20px 20px;
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+/* Efeito de hover no link do submenu */
+.navigation .submenu li a:hover {
+    background-color: #f1f1f1;
+    color: #356afc;
+}
+
+/* Estilo para o resto do menu */
+.navigation .logo {
+    color: #1351fa;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover {
+    color: #356afc;
+}
+
+.navigation i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+    background: #356afc;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.home-text{
+    max-width: 37rem;
+}
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: #356afc;
+    margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+.home-text p{
+    margin-bottom: 4rem;
+}
+.home-btn{
+    padding: 15px 45px;
+    background: #356afc;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.home-btn:hover{
+    background: rgb(1, 94, 122);
+}
+.home-img img{
+    width: 100%;
+}
+@media (max-width:785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+}
+
+
+
+
+#image-container {
+    display: none; /* Esconde o container da imagem por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Faz com que o container fique acima de outros elementos */
+}
+#image-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#open-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#open-button:hover {
+    background-color: #0056b3;
+}
+
+
+a.botao {
+    display: inline-block; /* Faz o link se comportar como um bloco */
+    padding: 10px 20px; /* Espaçamento interno */
+    color: white; /* Cor do texto */
+    background-color: #356afc; /* Cor de fundo */
+    text-decoration: none; /* Remove o sublinhado */
+    border: 2px solid #356afc; /* Borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s, border-color 0.3s; /* Efeito suave na transição */
+}
+
+a.botao:hover {
+    background-color: rgb(1, 94, 122); /* Cor de fundo ao passar o mouse */
+    border-color: rgb(1, 94, 122); /* Cor da borda ao passar o mouse */
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    z-index: 1;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+/*BARRA*/
+.barra-horizontal {
+    background-color: #015f83;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.barra-horizontal p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/*conteúdo (layout)*/
+
+.container {
+    max-width: 940px;
+    margin: auto;
+    overflow: auto;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.video-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.video-pequeno {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    cursor: pointer;
+    border: 5px solid #015f83;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/*rodape*/
+.rodape {
+    background-color: #252525;
+    color: white;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info, .links, .social {
+    margin: 0 10px;
+    flex: 1;
+}
+
+.info h2, .links h3, .social h3 {
+    margin-top: 0;
+}
+
+.info p, .links ul {
+    margin: 5px 0;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 5px;
+}
+
+.links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social-link {
+    margin-right: 10px;
+}
+
+.social-link img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.copy {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ffffff;
+}
+
+
+/*videos*/
+.conteudo {
+    display: none;
+    margin-top: 20px;
+}
+
+/*formulario de contato*/
+.form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form .title {
+    color: royalblue;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form input {
+    outline: 0;
+    border: 1px solid rgb(219, 213, 213);
+    padding: 8px 14px;
+    border-radius: 8px;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .form textarea {
+    border-radius: 8px;
+    height: 100px;
+    width: 100%;
+    resize: none;
+    outline: 0;
+    padding: 8px 14px;
+    border: 1px solid rgb(219, 213, 213);
+  }
+  
+  .form button {
+    align-self: flex-end;
+    padding: 8px;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+
+    header {
+    position: relative;
+    z-index: 2000;
+    }
+
+    #close-button {
+        font-size: 20px;
+        padding: 12px 16px;
+    }
+
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+        cursor: pointer;
+        z-index: 2001;
+        position: relative;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 30px 20px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.ativo {
+        right: 16px;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+    .nav-item a {
+        font-size: 18px;
+    }
+
+    .video-pequeno {
+        max-height: 45vh;
+        border-width: 3px;
+    }
+
+    /* SUBMENU */
+    .submenu {
+        display: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .dropdown.ativo .submenu {
+        display: block;
+    }
+
+    .submenu li a {
+        padding: 12px 0;
+        display: block;
+        font-size: 16px;
+    }
+
+    [vw].enabled {
+    z-index: 500;
+    }
+
+    /* HOME */
+    .home {
+        flex-direction: column;
+        height: auto;
+        padding: 120px 5% 40px;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .home-text {
+        max-width: 100%;
+    }
+
+    .home-text .text-h1 {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+
+    .home-text p {
+        margin-bottom: 2rem;
+    }
+
+    .home-img img {
+        max-width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /* CARDS */
+    .card {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    /* GRID ANTIGO (col-*) */
+    [class*="col-"] {
+        width: 100%;
+        float: none;
+    }
+
+    /* SLIDESHOW */
+    .slideshow-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .prev, .next {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    /* FOOTER */
+    .rodape .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .social {
+        justify-content: center;
+    }
+
+    /* FORMULÁRIO */
+    .form {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .form button {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    .navigation {
+        padding: 15px;
+    }
+
+    .home-text .text-h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .home-text .text-h4 {
+        font-size: 1.2rem;
+    }
+
+    .barra-horizontal p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    /* BOTÕES */
+    .home-btn,
+    a.botao {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* TEXTO SLIDESHOW */
+    .text {
+        font-size: 13px;
+    }
+
+    /* FORM */
+    .form .title {
+        font-size: 24px;
+    }
+}
+
