@@ -73,4 +73,4 @@ Esse projeto representa exatamente isso: evolução, aprendizado e prática real
 🔗 Acesse o projeto
 
 👉 Link do site publicado:
-https://lucaslinsrl.github.io/cognitiveharmonicPLM/
+https://lucas-linsll.github.io/cognitiveharmonicPLM/
